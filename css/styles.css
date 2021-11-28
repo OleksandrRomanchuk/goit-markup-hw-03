@@ -10,17 +10,13 @@ body {
   color: var(--primary-font-color);
   letter-spacing: 0.03em;
 
-  width: 1600px;
-  display: flex;
-  flex-direction: column;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0px;
 }
 
 .section {
-  width: 1600px;
-
   display: flex;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 94px;
   padding-bottom: 94px;
   justify-content: center;
@@ -41,7 +37,7 @@ ul {
   list-style-type: none;
 
   margin: 0px;
-  padding-left: 0px;
+  padding: 0px;
   display: flex;
 }
 
@@ -75,8 +71,6 @@ h6 {
   line-height: 1.2;
   color: var(--hover-focus-color);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-  width: 145px;
 }
 
 .site-nav .logo .studio {
@@ -84,6 +78,7 @@ h6 {
 }
 
 .link,
+.page,
 .contact-header,
 .e-mail,
 .tel {
@@ -95,18 +90,16 @@ h6 {
 }
 
 .links {
-  width: 294px;
   margin-left: 93px;
-  justify-content: space-between;
   align-items: center;
+}
+
+.links > .link:not(:last-child) {
+  margin-right: 50px;
 }
 
 .site-nav .page {
   color: var(--header-color);
-}
-
-.page {
-  text-decoration: none;
 }
 
 .page.current {
@@ -120,7 +113,7 @@ h6 {
 
 .contact-header {
   align-items: center;
-  margin-left: 331px;
+  margin-left: auto;
 }
 
 .e-mail {
@@ -144,6 +137,7 @@ h6 {
 /* hero-section */
 .hero.section {
   background-color: #2f303a;
+  text-align: center;
 
   padding-top: 200px;
   padding-bottom: 200px;
@@ -154,7 +148,7 @@ h6 {
   align-items: center;
 }
 
-.hero.title {
+.hero .title {
   color: #ffffff;
   font-weight: 900;
   font-size: 44px;
@@ -178,18 +172,18 @@ h6 {
   line-height: 1.87;
   letter-spacing: 0.06em;
 
-  width: 200px;
-  padding: 10px 31px;
+  padding: 10px 32px;
   margin-top: 30px;
 }
 
-.hero-section .button:hover,
+.hero .button:hover,
 .button:focus {
   background: #188ce8;
 }
 
 .button {
   font-family: Roboto, sans-serif;
+  min-width: 73px;
   cursor: pointer;
 }
 
@@ -200,11 +194,6 @@ h6 {
 
 .features-list {
   font-size: 14px;
-  justify-content: space-between;
-}
-
-.feature {
-  width: 270px;
 }
 
 .feature:not(:last-child) {
@@ -232,7 +221,6 @@ h6 {
 }
 
 .images {
-  flex-basis: calc((100% - 60px) / 3);
   margin-top: 50px;
 }
 
@@ -264,6 +252,7 @@ h6 {
   line-height: 1.17;
 
   text-align: center;
+  margin: 0px;
 }
 
 .team.cards {
@@ -289,7 +278,6 @@ h6 {
 
 .card > .title {
   font-weight: 500;
-  margin-right: 0px;
 }
 
 div.card-name {
@@ -312,7 +300,6 @@ footer.section {
   font-size: 14px;
   line-height: 1.71;
 
-  width: 1600px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -323,6 +310,7 @@ footer > .container {
 
 footer .logo {
   text-shadow: none;
+  width: 145px;
 }
 
 .logo .studio {
@@ -343,6 +331,9 @@ footer .logo {
 
 .contact-footer {
   font-style: normal;
+}
+
+.contact-footer:not(:first-child) {
   margin-top: 9px;
 }
 
@@ -369,13 +360,15 @@ footer .logo {
 }
 
 .filters {
-  width: 611px;
-  justify-content: space-between;
   margin-bottom: 34px;
 }
 
 .products.title {
   display: none;
+}
+
+.filter:not(:last-child) {
+  margin-right: 8px;
 }
 
 .all,
@@ -390,59 +383,35 @@ footer .logo {
   font-size: 16px;
   color: var(--header-color);
   line-height: 1.62;
-}
-.all {
-  width: 73px;
+  padding: 6px 22px;
 }
 
-.sites {
-  width: 128px;
-}
-
-.apps {
-  width: 145px;
-}
-
-.design {
-  width: 103px;
-}
-
-.marketing {
-  width: 130px;
-}
-
-.filters .button:active,
-.filters .button:hover,
-.filters .button:focus {
+.filter .button:active,
+.filter .button:hover,
+.filter .button:focus {
   background: var(--hover-focus-color);
   color: #ffffff;
 }
 
-.filters .button:active {
+.filter .button:active {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .projects {
   flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+  margin: -15px;
 }
 
-.project > img {
+.project img {
   display: block;
 }
 
 .project {
   background: #ffffff;
 
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
-}
-
-.project.link {
-  text-decoration: none;
+  flex-basis: calc((100% - 90px) / 3);
+  margin: 15px;
 }
 
 .discription {
