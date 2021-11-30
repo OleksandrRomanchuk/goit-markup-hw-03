@@ -14,12 +14,10 @@ body {
 }
 
 .section {
-  display: flex;
   margin-right: auto;
   margin-left: auto;
   padding-top: 94px;
   padding-bottom: 94px;
-  justify-content: center;
 }
 
 .container {
@@ -27,10 +25,20 @@ body {
   display: flex;
   padding-right: 15px;
   padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title {
   color: var(--header-color);
+}
+
+.visualy-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 ul {
@@ -50,13 +58,16 @@ h6 {
   margin: 0px;
 }
 
+img {
+  display: block;
+}
+
 /* header */
 /* navigation */
 
-.section.site-nav {
-  padding-top: 24px;
-  padding-bottom: 25px;
+.site-nav {
   border-bottom: 1px solid #ececec;
+  align-items: center;
 }
 
 .container > .site-nav {
@@ -70,7 +81,6 @@ h6 {
   font-size: 26px;
   line-height: 1.2;
   color: var(--hover-focus-color);
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .site-nav .logo .studio {
@@ -100,6 +110,10 @@ h6 {
 
 .site-nav .page {
   color: var(--header-color);
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .page.current {
@@ -116,13 +130,14 @@ h6 {
   margin-left: auto;
 }
 
-.e-mail {
-  color: var(--primary-font-color);
-}
-
+.e-mail,
 .tel {
   color: var(--primary-font-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
 
+.contact-header li:last-child {
   margin-left: 50px;
 }
 
@@ -188,6 +203,10 @@ h6 {
 }
 
 /* features-section */
+.feature {
+  width: 270px;
+}
+
 .features.title {
   display: none;
 }
@@ -313,6 +332,10 @@ footer .logo {
   width: 145px;
 }
 
+address {
+  margin-top: 20px;
+}
+
 .logo .studio {
   color: #ffffff;
 }
@@ -325,8 +348,6 @@ footer .logo {
 
 .contacts {
   flex-direction: column;
-
-  margin-top: 20px;
 }
 
 .contact-footer {
@@ -360,11 +381,7 @@ footer .logo {
 }
 
 .filters {
-  margin-bottom: 34px;
-}
-
-.products.title {
-  display: none;
+  margin-bottom: 50px;
 }
 
 .filter:not(:last-child) {
@@ -403,10 +420,6 @@ footer .logo {
   margin: -15px;
 }
 
-.project img {
-  display: block;
-}
-
 .project {
   background: #ffffff;
 
@@ -425,10 +438,12 @@ footer .logo {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 
 .discription .text {
   color: var(--primary-font-color);
   font-size: 16px;
   line-height: 1.87;
+  margin: 0px;
 }
