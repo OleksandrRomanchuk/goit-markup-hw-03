@@ -66,8 +66,11 @@ img {
 /* navigation */
 
 .site-nav {
-  border-bottom: 1px solid #ececec;
   align-items: center;
+}
+
+.site-nav > .container {
+  border-bottom: 1px solid #ececec;
 }
 
 .container > .site-nav {
@@ -328,7 +331,6 @@ footer > .container {
 }
 
 footer .logo {
-  text-shadow: none;
   width: 145px;
 }
 
